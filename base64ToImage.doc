@@ -1,0 +1,2 @@
+Base64 -> image
+<body><img alt="<image_Name>" src="data:image/<image_File_Extension>;base64, <base64_Image_String>"></img>

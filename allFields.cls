@@ -1,0 +1,1 @@
+String fields = String.join( [sObjectName].sObjectType.getDescribe().fields.getMap().keySet(), ',' );

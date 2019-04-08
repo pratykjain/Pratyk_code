@@ -1,0 +1,12 @@
+Resource Locking
+
+SOQL -> [SELECT fieldNames FROM sObject FOR UPDATE];
+
+
+Approval.LockResult[] lrList = Approval.lock(accts);
+Approval.UnlockResult[] urList = Approval.unlock(accts);
+
+
+
+// Start Approval process
+Approval.ProcessResult result = Approval.process(req1);

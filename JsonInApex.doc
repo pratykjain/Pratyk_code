@@ -1,0 +1,26 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+															     JSON in APEX											
+											Owner : Pratyk Jain		 				Date : 12/6/17
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+Easy method to use JSON in Apex ->  WRAPPER CLASS
+
+// Multiple elements -> 1 JSON
+[Var-Name] :
+            [
+                {
+                    "[JSON-Field-Names]" : "{{values}}"
+                },
+                {
+                    "[JSON-Field-Names]" : "{{values}}"
+                }
+            ]
+public class [Wrapper-Class]{
+    public String [JSON-Field-Names];
+}
+
+public void [Called-Fn] (String [Var-Name]){
+    List<[Wrapper-Class]> wrapperVarName = (List<[Wrapper-Class]>)JSON.deserialize([Var-Name], List<[Wrapper-Class]>.class);
+
+    wrapperVarName.[JSON-Field-Name-1];
+}

@@ -1,0 +1,2 @@
+Access Static Resource
+{!URLFOR($Resource.file-name, '[branch-to-file]')}		[branch-to-file] ---> .zip file
